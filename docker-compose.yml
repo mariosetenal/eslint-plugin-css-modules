@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  app:
+    image: node:12-alpine
+    working_dir: /var/app
+    volumes:
+      - ./:/var/app
+    command: sh -c 'npm install && tail -f /dev/null'
